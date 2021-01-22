@@ -120,7 +120,7 @@ Denne .jar-filen skal nå legges til som en plugin i SonarQube. Dette gjøres ve
 
 **For docker:**
 1. `docker ps` for å få oversikt over alle kontainerne som kjører.
-![docker ps](./images/docker_ps.png)
+![docker ps](/images/docker_ps.png)
 2. `docker exec -it CONTAINER_ID /bin/bash` (630, trenger ikke hele, for mitt tilfellet)
 ![docker exec](./images/docker_exec.png)
 3. `ls` viser blant annet mappen `extensions` som inneholder `plugins`.
