@@ -50,7 +50,7 @@ Når SonarScanner er lastet ned så må SonarScanner pakkes ut og legges til et 
 2. Finn et C#/Java-prosjekt og flytt deg inn til prosjektets toppnivå via terminalen (shell). 
 3. Før vi scanner må vi lage et prosjekt i SonarQube [http://localhost:9000](localhost:9000) (se bilde under).  
    
-![Step 3: Create prosject](./images/sonarqube_create_new_project.png)
+![Step 3: Create prosject](https://github.com/larsfk/secure_development/blob/master/images/sonarqube_create_new_project.PNG)
 
 4. Fyll ut prosjektnavn og prosjektnøkkel (kan godt være det samme).
 5. Generere en token. Eks: project-name-backend-token
@@ -120,15 +120,15 @@ Denne .jar-filen skal nå legges til som en plugin i SonarQube. Dette gjøres ve
 
 **For docker:**
 1. `docker ps` for å få oversikt over alle kontainerne som kjører.
-![docker ps](/images/docker_ps.png)
+![docker ps](https://github.com/larsfk/secure_development/blob/master/images/docker_cp.PNG)
 2. `docker exec -it CONTAINER_ID /bin/bash` (630, trenger ikke hele, for mitt tilfellet)
-![docker exec](./images/docker_exec.png)
+![docker exec](https://github.com/larsfk/secure_development/blob/master/images/docker_exec.PNG)
 3. `ls` viser blant annet mappen `extensions` som inneholder `plugins`.
-![ls](./images/docker_ls.png)
+![ls](https://github.com/larsfk/secure_development/blob/master/images/docker_ls.PNG)
 4. Åpne en ny terminal/shell for å kopiere filer fra lokalt til docker
 5. Naviger til `sonar-dependency-check-plugin-xxx.jar`
 6. Skriv så `docker cp sonar-dependency-check-plugin-xxx.jar CONTAINER_ID:opt/sonarqube/extensions/plugins/sonar-dependency-check-plugin-xxx.jar`
-![docker cp](./images/docker_cp.png)
+![docker cp](https://github.com/larsfk/secure_development/blob/master/images/docker_cp.PNG)
 7. Se så at filen ligger i docker kontaineren under extensions/plugins. 
 8. Gå inn på localhost:9000 og restart serveren (Administration -> System -> Restart Server)
 9. Nå kan SonarScanner kjøres på nytt, men legg til følgende "flagg":
